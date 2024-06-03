@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Lable_color_validation" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1234,1851" sap2010:WorkflowViewState.IdRef="Lable_color_validation_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:c="clr-namespace:ColorDetector;assembly=ColorDetector" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uit="http://schemas.uipath.com/workflow/activities/terminal" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Lable_color_validation" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1234,1289" sap2010:WorkflowViewState.IdRef="Lable_color_validation_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:c="clr-namespace:ColorDetector;assembly=ColorDetector" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>Microsoft.VisualBasic</x:String>
@@ -112,14 +112,15 @@
       <AssemblyReference>UiPath.Terminal.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Terminal.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Lable_color_validation" sap:VirtualizedContainerService.HintSize="637,1786" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Lable_color_validation" sap:VirtualizedContainerService.HintSize="512,1224" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Colorval" />
       <Variable x:TypeArguments="sd:Rectangle" Name="Corodinates" />
-      <Variable x:TypeArguments="x:Int32" Name="Xvalue" />
-      <Variable x:TypeArguments="x:Int32" Name="Yvalue" />
+      <Variable x:TypeArguments="x:String" Name="Xvalue" />
+      <Variable x:TypeArguments="x:String" Name="Yvalue" />
       <Variable x:TypeArguments="sd:Color" Name="Color" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
@@ -127,19 +128,19 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Login" sap:VirtualizedContainerService.HintSize="575,1675" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="ddc6e89c-6170-43d8-b48d-68a0823fee7f" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Login" sap:VirtualizedContainerService.HintSize="450,1113" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="ddc6e89c-6170-43d8-b48d-68a0823fee7f" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="541,1385" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,823" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Global Methods\Login.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="479,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Global Methods\Login.xaml">
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Global Methods\Login.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="354,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Global Methods\Login.xaml">
               <ui:InvokeWorkflowFile.Arguments>
                 <InArgument x:TypeArguments="x:String" x:Key="UserName">Collins</InArgument>
                 <InArgument x:TypeArguments="x:String" x:Key="Password">Pnx@2016</InArgument>
@@ -147,7 +148,7 @@
                 <InArgument x:TypeArguments="x:String" x:Key="Database">AutomationCAD</InArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
-            <ui:GetPosition ContinueOnError="{x:Null}" DisplayName="Get Position 'IMG'" sap:VirtualizedContainerService.HintSize="479,107" sap2010:WorkflowViewState.IdRef="GetPosition_3" Rectangle="[Corodinates]">
+            <ui:GetPosition ContinueOnError="{x:Null}" DisplayName="Get Position 'IMG'" sap:VirtualizedContainerService.HintSize="354,107" sap2010:WorkflowViewState.IdRef="GetPosition_3" Rectangle="[Corodinates]">
               <ui:GetPosition.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7198e24b-67a0-431f-8cde-3d056a8b97f2" InformativeScreenshot="70b4d978ca8a3f2297bc0dba6f93601a" Selector="&lt;html app='kpi.phoenix.cadclient.exe' url='about:blank' /&gt;&lt;webctrl css-selector='body&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;b' idx='2' parentid='GEOInfo' tableCol='1' tableRow='1' tag='B' /&gt;">
                   <ui:Target.TimeoutMS>
@@ -159,80 +160,9 @@
                 </ui:Target>
               </ui:GetPosition.Target>
             </ui:GetPosition>
-            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="479,147" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
-              <ui:MultipleAssign.AssignOperations>
-                <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
-                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
-                    <ui:AssignOperation.To>
-                      <OutArgument x:TypeArguments="x:Int32">[Xvalue]</OutArgument>
-                    </ui:AssignOperation.To>
-                    <ui:AssignOperation.Value>
-                      <InArgument x:TypeArguments="x:Int32">[Corodinates.X]</InArgument>
-                    </ui:AssignOperation.Value>
-                  </ui:AssignOperation>
-                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
-                    <ui:AssignOperation.To>
-                      <OutArgument x:TypeArguments="x:Int32">[Yvalue]</OutArgument>
-                    </ui:AssignOperation.To>
-                    <ui:AssignOperation.Value>
-                      <InArgument x:TypeArguments="x:Int32">[Corodinates.Y]</InArgument>
-                    </ui:AssignOperation.Value>
-                  </ui:AssignOperation>
-                </scg:List>
-              </ui:MultipleAssign.AssignOperations>
-            </ui:MultipleAssign>
-            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="479,62" sap2010:WorkflowViewState.IdRef="WriteLine_5" Text="[&quot;X value is:&quot;+Xvalue.ToString]" />
-            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="479,62" sap2010:WorkflowViewState.IdRef="WriteLine_6" Text="[&quot;Y value is:&quot;+Yvalue.ToString]" />
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="479,25" sap2010:WorkflowViewState.IdRef="CommentOut_2">
-              <ui:CommentOut.Body>
-                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,168" sap2010:WorkflowViewState.IdRef="Sequence_4">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <uit:TerminalGetColorAtPosition Column="[Yvalue]" DelayMS="300" DisplayName="Get Color At Position" sap:VirtualizedContainerService.HintSize="354,60" sap2010:WorkflowViewState.IdRef="TerminalGetColorAtPosition_1" Row="[Xvalue]" TerminalColor="[Color]" TimeoutMS="5000" WaitType="READY" />
-                </Sequence>
-              </ui:CommentOut.Body>
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-            </ui:CommentOut>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="479,267" sap2010:WorkflowViewState.IdRef="CommentOut_3">
-              <ui:CommentOut.Body>
-                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,188" sap2010:WorkflowViewState.IdRef="Sequence_5">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <c:ColorFromImage ColorMap="{x:Null}" ColorScheme="PrimaryColor" DisplayName="Color from image" sap:VirtualizedContainerService.HintSize="354,80" sap2010:WorkflowViewState.IdRef="ColorFromImage_1" ImageVal="[Corodinates.X+Corodinates.Y]" />
-                </Sequence>
-              </ui:CommentOut.Body>
-            </ui:CommentOut>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="479,25" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-              <ui:CommentOut.Body>
-                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,294" sap2010:WorkflowViewState.IdRef="Sequence_3">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <c:ColorFromScreen ColorScheme="KnownColor" Color_Value="[Colorval]" DisplayName="Color from screen" HighlightFlag="True" sap:VirtualizedContainerService.HintSize="354,186" sap2010:WorkflowViewState.IdRef="ColorFromScreen_4" X="[Corodinates.X]" Y="[Corodinates.Y]" />
-                </Sequence>
-              </ui:CommentOut.Body>
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-            </ui:CommentOut>
-            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="479,85" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Color is:&quot;+Color.ToString]" />
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="479,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Color is&quot;+Color.ToString]" />
+            <c:ColorFromScreen ColorScheme="KnownColor" Color_Value="[Colorval]" DisplayName="Color from screen" HighlightFlag="True" sap:VirtualizedContainerService.HintSize="354,186" sap2010:WorkflowViewState.IdRef="ColorFromScreen_5" X="[Corodinates.X]" Y="[Corodinates.Y]" />
+            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="354,85" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Color is:&quot;+Colorval]" />
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="354,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Color is&quot;+Colorval]" />
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>
