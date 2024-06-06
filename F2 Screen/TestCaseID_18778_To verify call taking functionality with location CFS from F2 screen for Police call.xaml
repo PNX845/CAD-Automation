@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="To_verify_call_taking_functionality_with_location_CFS_from_F2_screen_for_Police_call" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1234,5984" sap2010:WorkflowViewState.IdRef="To_verify_call_taking_functionality_with_location_CFS_from_F2_screen_for_Police_call_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:sd1="clr-namespace:System.Data;assembly=System.Data" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="To_verify_call_taking_functionality_with_location_CFS_from_F2_screen_for_Police_call" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1206,5984" sap2010:WorkflowViewState.IdRef="To_verify_call_taking_functionality_with_location_CFS_from_F2_screen_for_Police_call_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:sd1="clr-namespace:System.Data;assembly=System.Data" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="104">
       <x:String>System.Activities</x:String>
@@ -103,6 +103,9 @@
       <AssemblyReference>NPOI</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
       <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>UiPath.Presentations.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="To_verify_call_taking_functionality_with_location_CFS_from_F2_screen_for_Police_call_18778" sap:VirtualizedContainerService.HintSize="692,5919" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -123,9 +126,21 @@
           </ActivityAction.Argument>
           <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="596,5518" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
-              <Variable x:TypeArguments="x:String" Default="Stalin" Name="UserName" />
-              <Variable x:TypeArguments="x:String" Default="Pnx@2023" Name="Password" />
-              <Variable x:TypeArguments="x:String" Default="STA" Name="Terminal" />
+              <Variable x:TypeArguments="x:String" Name="UserName">
+                <Variable.Default>
+                  <Literal x:TypeArguments="x:String">Kamal</Literal>
+                </Variable.Default>
+              </Variable>
+              <Variable x:TypeArguments="x:String" Name="Password">
+                <Variable.Default>
+                  <Literal x:TypeArguments="x:String">Pnx@2016</Literal>
+                </Variable.Default>
+              </Variable>
+              <Variable x:TypeArguments="x:String" Name="Terminal">
+                <Variable.Default>
+                  <Literal x:TypeArguments="x:String">CAD345</Literal>
+                </Variable.Default>
+              </Variable>
               <Variable x:TypeArguments="x:String" Default="1213 Hamilton" Name="Location" />
               <Variable x:TypeArguments="x:String" Name="AddressInTakeCallPopup" />
               <Variable x:TypeArguments="x:String" Default="1213 Hamilton Ave;SOP" Name="AddressMatchFound" />
@@ -149,12 +164,20 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Global Methods\Login.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="534,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Global Methods\Login.xaml">
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Global Methods\Login.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="534,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Global Methods\Login.xaml">
               <ui:InvokeWorkflowFile.Arguments>
-                <InArgument x:TypeArguments="x:String" x:Key="UserName">[UserName]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="Password">[Password]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="Terminal">[Terminal]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="Database">[Database]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="UserName">
+                  <Literal x:TypeArguments="x:String">Kamal</Literal>
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Password">
+                  <Literal x:TypeArguments="x:String">Pnx@2016</Literal>
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Terminal">
+                  <Literal x:TypeArguments="x:String">CAD345</Literal>
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Database">
+                  <Literal x:TypeArguments="x:String">AutomationCAD</Literal>
+                </InArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
             <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="534,25" sap2010:WorkflowViewState.IdRef="Delay_1" />
