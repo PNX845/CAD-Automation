@@ -84,7 +84,6 @@
       <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
       <AssemblyReference>UiPath.Word.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.Presentations.Activities.Design</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="TestCaseID_18800_To_verify_Link___Merge_function_from_F3_Screen" sap:VirtualizedContainerService.HintSize="788,9551" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -101,16 +100,8 @@
           </ActivityAction.Argument>
           <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="692,9150" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <Sequence.Variables>
-              <Variable x:TypeArguments="x:String" Name="UserName">
-                <Variable.Default>
-                  <Literal x:TypeArguments="x:String">Kamal</Literal>
-                </Variable.Default>
-              </Variable>
-              <Variable x:TypeArguments="x:String" Name="Password">
-                <Variable.Default>
-                  <Literal x:TypeArguments="x:String">Pnx@2016</Literal>
-                </Variable.Default>
-              </Variable>
+              <Variable x:TypeArguments="x:String" Default="Kamal" Name="UserName" />
+              <Variable x:TypeArguments="x:String" Default="Pnx@2016" Name="Password" />
               <Variable x:TypeArguments="x:String" Default="728 S Broad St,BUILD;SOP" Name="Location" />
               <Variable x:TypeArguments="x:String" Default="100" Name="CFSCode" />
               <Variable x:TypeArguments="x:String" Default="P" Name="src" />
@@ -132,18 +123,10 @@
             </sap:WorkflowViewStateService.ViewState>
             <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Global Methods\Login.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="630,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Global Methods\Login.xaml">
               <ui:InvokeWorkflowFile.Arguments>
-                <InArgument x:TypeArguments="x:String" x:Key="UserName">
-                  <Literal x:TypeArguments="x:String">Kamal</Literal>
-                </InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="Password">
-                  <Literal x:TypeArguments="x:String">Pnx@2016</Literal>
-                </InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="Terminal">
-                  <Literal x:TypeArguments="x:String">CAD345</Literal>
-                </InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="Database">
-                  <Literal x:TypeArguments="x:String">AutomationCAD</Literal>
-                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="UserName">Kamal</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Password">Pnx@2016</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Terminal">CAD345</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Database">AutomationCAD</InArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
             <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="630,25" sap2010:WorkflowViewState.IdRef="Delay_1" />
@@ -852,7 +835,7 @@
         </ActivityAction>
       </uix:NApplicationCard.Body>
       <uix:NApplicationCard.TargetApp>
-        <uix:TargetApp Area="0, 0, 1920, 1040" ContentHash="_gDYfmwP2UOmG0Yv0zdATg" FilePath="D:\CAD Client\kpi.phoenix.cadclient.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEaSURBVFhH7ZTbCoJAEIYlgoggguhZiw5QVBdB14HQ00T0CqUP4AN41puJAVe92F3HRZegHfgQFvH7/1nQMmPmZ+Z8uYJOCm01vJe64PF8cZ+Ftho89DxPC8IAeZ73QpZlJWmattsAfsBavsk0yRsD3Ox7ST3A4uTC/OjC7ODCdO/AZOfAeOvAaPOB4foDg1UVwLZtIUmSqG2AIq9vgNcc5coBKHIWgNec0RhAdAUUOSJrjsRxrLYBihxBMa85QzkARY7ImjOkAURXQJEjKOY1Z0RRpLYBihyRNUe5cgCKHEEprzmjMYDoCqjImiNhGKptgApvA3V57wFkzbUGEMmDIGgfAKH84ShypQBdyn3fFwfQSaE1Y+bvx7K+Vs0alqBeFFIAAAAASUVORK5CYII=" InformativeScreenshot="91cd807fb6480a40db2f079926e5eb51.png" Reference="THDf1UhB6U6EKgZN7HF2zw/Wo_ywyL4DkCaihqa2bHGOA" Selector="&lt;wnd app='kpi.phoenix.cadclient.exe' ctrlname='frmLogin' /&gt;" />
+        <uix:TargetApp Area="0, 0, 1920, 1040" ContentHash="_gDYfmwP2UOmG0Yv0zdATg" FilePath="D:\Version1.118\CAD Client\KPI.Phoenix.CADClient.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEaSURBVFhH7ZTbCoJAEIYlgoggguhZiw5QVBdB14HQ00T0CqUP4AN41puJAVe92F3HRZegHfgQFvH7/1nQMmPmZ+Z8uYJOCm01vJe64PF8cZ+Ftho89DxPC8IAeZ73QpZlJWmattsAfsBavsk0yRsD3Ox7ST3A4uTC/OjC7ODCdO/AZOfAeOvAaPOB4foDg1UVwLZtIUmSqG2AIq9vgNcc5coBKHIWgNec0RhAdAUUOSJrjsRxrLYBihxBMa85QzkARY7ImjOkAURXQJEjKOY1Z0RRpLYBihyRNUe5cgCKHEEprzmjMYDoCqjImiNhGKptgApvA3V57wFkzbUGEMmDIGgfAKH84ShypQBdyn3fFwfQSaE1Y+bvx7K+Vs0alqBeFFIAAAAASUVORK5CYII=" InformativeScreenshot="91cd807fb6480a40db2f079926e5eb51.png" Reference="THDf1UhB6U6EKgZN7HF2zw/Wo_ywyL4DkCaihqa2bHGOA" Selector="&lt;wnd app='kpi.phoenix.cadclient.exe' ctrlname='frmLogin' /&gt;" />
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
   </Sequence>
